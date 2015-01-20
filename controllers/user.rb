@@ -8,6 +8,11 @@ module ToDoApp
         end
       end
 
+      action 'Signin' do
+        def call(params)
+        end
+      end
+
       action 'Create' do
         def call(params)
         # Hier wird ein neues Userobjekt angelegt

@@ -10,6 +10,7 @@ module ToDoApp
         get '/impressum', to: 'imprint#page'
         get '/users/new', to: 'users#new' # liefert das Registierungsformular aus
         post '/users/create', to: 'users#create'
+        get '/users/signin', to: 'users#signin' # kein post, da nichts geschrieben wird, nur aufgerufen
         # Reihenfolge wichtig, da von oben nach untern durchsucht wird
       end
 
