@@ -1,0 +1,39 @@
+<a href="users/new">Registirerung</a>
+
+<h1>ToDoApp</h1>
+<p>
+Hier ist die erste Seite von der ToDoApp!
+</p>
+<form action="tasks/create" method='POST'>
+ Dein Username: <input type="user" name="usertask" autofocus="true"/></p>
+ Deine Email Adresse: <input type="email" name="useremail" autofocus="true"/></p>
+ Deine Aufgabe: <input type="text" name="task" autofocus="true"/>
+ <! -- damit das eingabefeld aktiv bleibt -->
+<input type="submit" value="bestaetigen" />
+</form>
+
+<form METHOD="GET" action="/">
+<button name="alphabetically">Alphabetisch</button>
+<button name="newest">Neuste zuerst</button>
+</form>
+
+<ul>
+  <% tasks.each do |task| %>
+  <li>
+  	<form action="/tasks/delete" METHOD="POST">
+  	<%= h(task.name) %>
+  	<input type ='hidden' value="<%= task.id%>" name="task_id">
+  	<! -- hidden! sendet versteckte Daten -->
+  	<button>Loeschen sie bitte hier</button>
+  	</form>
+  </li>
+<% end %>
+</ul>
+
+
+<a href="/impressum">Hier geht es zum Impressum</a>
+
+
+
+
+
