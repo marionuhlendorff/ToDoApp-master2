@@ -1,0 +1,29 @@
+body {
+  background-color: #FFFFFF;
+}
+
+.impressum-link {
+text-align: right;
+}
+
+p {
+  color: #669999;
+  font-family: Verdana;
+  text-align: left;
+  font-size: 26px;
+}
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+
+

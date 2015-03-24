@@ -1,9 +1,10 @@
 require 'lotus'
 require 'lotus/model'
+require 'lotus/action/session'
 module ToDoApp
   class Application < Lotus::Application
     configure do
-      routes do
+      routes do #nur für dinge, die in der datenbank hinterlegt sind
         get '/', to: 'home#index' #leitet es an server und zurück zum browser
         post '/tasks/create', to: 'home#create'
         post '/tasks/delete', to: 'home#delete'
@@ -12,6 +13,7 @@ module ToDoApp
         post '/users/create', to: 'users#create'
         get '/users/signin', to: 'users#signin' # kein post, da nichts geschrieben wird, nur aufgerufen
         post '/sessions/create', to: 'sessions#create'
+        post '/sessions/delete', to: 'sessions#delete' 
         # Reihenfolge wichtig, da von oben nach untern durchsucht wird
       end
 
@@ -39,6 +41,7 @@ module ToDoApp
 
         attribute :id,   Integer
         attribute :name, String
+        attribute :user_id, Integer
       end
       collection :users do
         entity     ToDoApp::Models::User

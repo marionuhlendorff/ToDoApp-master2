@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  	<meta charset="utf-8">
-    <title>ToDo!</title> 
-    <link href="/bla.css" /> 
-  </head>
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<head>
+
+	<style type="text/css">
+	h1 {font-family: arial, verdana; color:blue; sans-serif; border:2px solid black;text-align:center; }
+	P {font-family: arial, verdana; color: green}
+	li {font-family: arial, verdana; color: #8b0000}
+
+	h2, h3, h4, h5, h6 {
+		border:1px solid red;
+		text-align:left;
+		font-family: arial;
+	} 
+	</style
+	<meta charset="utf-8">
+	<title>ToDo!</title> 
+	<link href='/style.css' rel='stylesheet' type='text/css'> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/public/custom.css">
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>
+	<div class="container">
+	<%= yield %>
+	</div>
+	</body>
+	</html>
+
